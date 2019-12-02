@@ -1,23 +1,27 @@
 new Vue({
 	el: '#vue-app',
 	data: {
-		age: 25,
-		x: 0,
-		y: 0
+		available: true,
+		nearby: false
 	},
 	methods: {
-		add: function(inc) {
-			this.age += inc;
+		/* addToA: function() {
+			console.log('addToA');
+			return this.a + this.age;
 		},
-		subtract: function(dec) {
-			this.age -= dec;
+		addToB: function() {
+			console.log('addToB');
+			return this.b + this.age;
+		} */
+	},
+	computed: {
+		addToA: function() {
+			console.log('addToA');
+			return this.a + this.age;
 		},
-		updateXY: function(event) {
-			this.x = event.offsetX;
-			this.y = event.offsetY;
-		},
-		click: function() {
-			alert('You clicked me');
+		addToB: function() {
+			console.log('addToB');
+			return this.b + this.age;
 		}
 	}
 });
